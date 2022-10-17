@@ -279,7 +279,7 @@ function displayData() {
 
 // to define night or day to get correct condition image
 function defineDayorNight() {
-  if (currentHour > 17 && currentHour < 5) {
+  if (currentHour > 17 || currentHour < 5) {
     // console.log("night");
     return "night";
   } else {
