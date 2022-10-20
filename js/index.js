@@ -170,17 +170,25 @@ function setDayName() {
   var dayNum = new Date().getDay();
   // var dayHour = new Date().getHours();
   var days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Sunday", //0
+    "Monday", //1
+    "Tuesday", //2
+    "Wednesday", //3
+    "Thursday", //4
+    "Friday", //5
+    "Saturday", //6
   ];
   today = days[dayNum];
-  tomorrow = days[dayNum + 1];
-  afterTomorrow = days[dayNum + 2];
+  if (dayNum == 5) {
+    tomorrow = days[dayNum + 1];
+    afterTomorrow = days[0];
+  } else if (dayNum == 6) {
+    tomorrow = days[0];
+    afterTomorrow = days[1];
+  } else {
+    tomorrow = days[dayNum + 1];
+    afterTomorrow = days[dayNum + 2];
+  }
 }
 
 // sequence of running site
