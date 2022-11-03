@@ -73,7 +73,7 @@ var aftTomDateFormat; //
 
 async function getWeatherData(input) {
   var response = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=fa41290b5a7a4b5c873154347221410&q=${input}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=eddb8e5a9f144f738da220506220311&q=${input}&days=3`
   );
   var weatherData = await response.json();
   var test = JSON.stringify(weatherData);
